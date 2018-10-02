@@ -1,7 +1,7 @@
 ---
 title: "Weight Lifting Exercises Dataset analysis"
 author: "Kidpea LAU"
-date: "2018å¹<b4>10æœ<88>1æ—<a5>"
+date: "2018éª<b4>10éˆ<88>1éƒ<a5>"
 output:
   
   html_document: 
@@ -36,7 +36,7 @@ In the next , we will analysis the data and try to  find a predictor to classify
 ```
 ## Rattle: A free graphical interface for data science with R.
 ## XXXX 5.2.0 Copyright (c) 2006-2018 Togaware Pty Ltd.
-## ¼üÈë'rattle()'È¥ÇáÒ¡¡¢»Î¶¯¡¢·­¹öÄãµÄÊı¾İ¡£
+## é”®å…¥'rattle()'å»è½»æ‘‡ã€æ™ƒåŠ¨ã€ç¿»æ»šä½ çš„æ•°æ®ã€‚
 ```
 
 ```r
@@ -127,7 +127,7 @@ p2<-qplot(total_accel_arm,colour=classe,data=training,geom="density")
 p3<-qplot(total_accel_dumbbell,colour=classe,data=training,geom="density")
 p4<-qplot(total_accel_forearm,colour=classe,data=training,geom="density")
 ```
-![](PMLproject_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](unnamed-chunk-7-1.png)<!-- -->
 #TREE Model
 I will use trees to build the predictor,and check it out with fancy:
 
@@ -141,7 +141,7 @@ fancyRpartPlot(treemodel, sub="")
 ## Warning: labs do not fit even at cex 0.15, there may be some overplotting
 ```
 
-![](PMLproject_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](unnamed-chunk-8-1.png)<!-- -->
 Using confusion Matrix to test results:
 
 ```r
@@ -274,7 +274,7 @@ plot(RFconf$table, col = RFconf$byClass, main = paste(
        "Random Forest model confusion matrix: Accuracy =", round(RFconf$overall['Accuracy'], 4)))
 ```
 
-![](PMLproject_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](unnamed-chunk-12-1.png)<!-- -->
 The random forest model had an overall prediction accuracy of 99.42%. This accuracy was much higher than that found for the simple tree model. For the model calculated using the Random Forest method, the out of sample error rate is 0.58%.
 
 #predict the new testing data:
